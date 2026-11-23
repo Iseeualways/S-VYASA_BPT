@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#491617">
-  <title>S-VYASA BPT Admission 2027-28 | Physiotherapy Course Bangalore</title>
+  <title>S-VYASA BPT Admission 2027-28</title>
   <meta name="description"
-    content="Explore BPT at S-VYASA University, Bangalore: eligibility, fees, curriculum, clinical training at Cadabam’s Hospitals and career scope. Apply for 2026-27.">
+    content="Explore BPT at S-VYASA University, Bangalore: eligibility, fees, curriculum, clinical training at Cadabam’s Hospitals and career scope. Apply for 2027-28.">
   <meta property="og:title" content="S-VYASA BPT Admission 2026-27">
   <meta property="og:image" content="images/hero-banner.jpg">
   <link rel="icon" href="images/favicon.png">
@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- IMAGE SLOTS: drop real files into /images using the names below. Until a file exists, a placeholder is drawn automatically. -->
   <script>
     function phFix(i) {
       var kw = i.getAttribute('data-kw');
@@ -86,7 +85,7 @@
     h2 {
       font-size: clamp(1.8rem, 4.8vw, 3.5rem);
       font-weight: 700;
-    
+
     }
 
     h3 {
@@ -278,7 +277,7 @@
       background: var(--ac);
       border-color: var(--ac);
       color: var(--ink);
-      font-weight: 800;
+      font-weight: 800 !important;
     }
 
     .btn--accent:hover {
@@ -618,7 +617,7 @@
     }
 
     .form__title {
-      font-size: clamp(1.3rem, 2.4vw, 1.6rem);
+      font-size: clamp(1.3rem, 2.4vw, 1.4rem);
       margin-bottom: 8px
     }
 
@@ -1038,7 +1037,7 @@
 
     .rule:hover {
       transform: translateY(-6px);
-      background: #3b2929;
+      background: #251818;
       box-shadow: 0 24px 48px -24px rgba(0, 0, 0, .5);
     }
 
@@ -2017,8 +2016,8 @@
       border-radius: 999px;
       background: #fff;
       color: #2B0D0F;
-      border: 1px solid rgba(43, 13, 15, .1);
-      box-shadow: 0 8px 24px -8px rgba(43, 13, 15, .3);
+      border-bottom: 3px solid rgba(43, 13, 15, 0.836);
+      box-shadow: 0 8px 24px -8px rgba(43, 13, 15, 0.905);
       visibility: hidden;
       opacity: 0;
       transform: translateY(16px);
@@ -2103,8 +2102,8 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       margin: -12px 0 0 -12px;
       opacity: 0;
       transform: scale(.6);
@@ -2197,6 +2196,101 @@
       .xp__a {
         padding: 0 12px;
         font-size: .84rem
+      }
+    }
+
+
+    /* Popup lead form */
+    html.pop-lock {
+      overflow: hidden
+    }
+
+    .pop {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: flex;
+      padding: 16px;
+      overflow-y: auto;
+      background: rgba(43, 13, 15, .62);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .3s, visibility 0s .3s
+    }
+
+    .pop--open {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .3s, visibility 0s
+    }
+
+    .pop__card {
+      position: relative;
+      width: min(100%, 460px);
+      margin: auto;
+      padding: 30px 26px 26px;
+      border: 1px solid var(--ink);
+      border-radius: 24px;
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 0 30px 60px -24px rgba(43, 13, 15, .5);
+      transform: translateY(24px) scale(.98);
+      transition: transform .45s var(--ease)
+    }
+
+    .pop--open .pop__card {
+      transform: none
+    }
+
+    .pop__card .form__title {
+      padding-right: 44px
+    }
+
+    .pop__card .btn {
+      margin-top: 14px
+    }
+
+    .pop__x {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border: 1px solid var(--ln);
+      border-radius: 50%;
+      background: #fff;
+      color: var(--ink);
+      cursor: pointer;
+      transition: background .25s, transform .35s var(--ease)
+    }
+
+    .pop__x:hover {
+      background: #faf6f5;
+      transform: rotate(90deg)
+    }
+
+    .pop__x svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round
+    }
+
+    @media(max-width:700px) {
+      .pop {
+        padding: 12px
+      }
+
+      .pop__card {
+        padding: 26px 20px 22px;
+        border-radius: 20px
       }
     }
   </style>
@@ -2329,9 +2423,9 @@
           <p class="hero__lead">Study at Prashanti Kutiram Campus, Bangalore. Train at Cadabam’s Hospitals. Begin your
             physiotherapy career at S-VYASA.</p>
           <div class="hero__cta">
-            <a class="btn btn--accent" href="https://applynow.svyasa.edu.in/application-form-ug-pg-2026" target="_blank"
+            <a class="btn btn--accent" data-popup target="_blank"
               rel="noopener">Apply now</a>
-            <a class="btn btn--ghost" href="#lead">Download brochure</a>
+            <a class="btn btn--ghost" href="#programme">Programme Details</a>
           </div>
         </div>
         <form class="form" id="lead" action="#">
@@ -2867,7 +2961,7 @@
           <span class="step__n">Step 1</span>
           <h3>Share your details</h3>
           <p>Fill in the form at the top of the page to receive the BPT brochure.</p>
-          <a class="btn btn--ghost" href="#lead">Go to the form</a>
+          <a class="btn btn--ghost" data-popup href="#lead">Go to the form</a>
         </li>
         <li class="step">
           <span class="step__icon"><svg class="ico">
@@ -2875,7 +2969,7 @@
             </svg></span>
           <span class="step__n">Step 2</span>
           <h3>Talk to a counsellor</h3>
-          <p>Our team calls you for a free counselling session on BPT admissions 2026-27.</p>
+          <p>Our team calls you for a free counselling session on BPT admissions 2027-28.</p>
           <a class="btn btn--ghost" href="tel:+919996668116">Call +919996668116</a>
         </li>
       </ol>
@@ -2927,7 +3021,7 @@
     <div class="wrap">
       <h2>Ready To Learn Physiotherapy Where It Matters?</h2>
       <p>Study at Prashanti Kutiram Campus and train at Cadabam’s Hospitals. Admissions for 2027-2028 are open.</p>
-      <a class="btn btn--accent" href="https://applynow.svyasa.edu.in/application-form-ug-pg-2026" target="_blank"
+      <a class="btn btn--accent" data-popup target="_blank"
         rel="noopener">Apply for BPT</a>
     </div>
   </section>
@@ -2951,18 +3045,16 @@
         <a href="tel:+919996668116"><svg class="ico">
             <use href="#i-phone" />
           </svg>+91 9996668116</a>
-        <a href="https://wa.me/919845329050" target="_blank" rel="noopener"><svg class="ico">
-            <use href="#i-chat" />
-          </svg>WhatsApp</a>
       </div>
       <div>
         <h3>Official links</h3>
-        <a href="https://www.svyasa.edu.in/bachelor-of-physiotherapy-prashanthi.php" target="_blank" rel="noopener"><svg
-            class="ico">
+        <a href="#eligibility" rel="noopener"><svg class="ico">
             <use href="#i-arrow" />
-          </svg>BPT programme page</a>
-        <a href="https://applynow.svyasa.edu.in/application-form-ug-pg-2026" target="_blank" rel="noopener"><svg
-            class="ico">
+          </svg>Who can apply</a>
+        <a href="#careers" rel="noopener"><svg class="ico">
+            <use href="#i-arrow" />
+          </svg>Career opportunities</a>
+        <a href="#top" data-popup rel="noopener"><svg class="ico">
             <use href="#i-arrow" />
           </svg>Application form</a>
       </div>
@@ -2978,7 +3070,7 @@
         </svg>Call
       </a>
       <a class="xp__a xp__a--wa"
-        href="https://wa.me/919845329050?text=Hi%2C%20I%27d%20like%20to%20know%20about%20BPT%20admissions%20at%20S-VYASA%202027-28"
+       href="tel:+919996668116"
         target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path
@@ -3004,6 +3096,36 @@
         <path d="M6 6l12 12M18 6 6 18" />
       </svg>
     </button>
+  </div>
+
+  <div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popTitle">
+    <form class="pop__card" id="popForm" action="#">
+      <button class="pop__x" id="popClose" type="button" aria-label="Close form"><svg viewBox="0 0 24 24"
+          aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" />
+        </svg></button>
+      <div class="form__body">
+        <h2 class="form__title" id="popTitle">Enter your details to get started</h2>
+        <p class="form__sub">Get the brochure and a free counselling call.</p>
+        <input class="form__field" type="text" placeholder="Full name" aria-label="Full name" autocomplete="name"
+          required>
+        <input class="form__field" type="tel" placeholder="Mobile number" aria-label="Mobile number" autocomplete="tel"
+          inputmode="tel" pattern="[0-9+ ]{10,14}" required>
+        <input class="form__field" type="email" placeholder="Email address" aria-label="Email address"
+          autocomplete="email">
+        <select class="form__field" id="popState" name="state" autocomplete="address-level1" aria-label="State"
+          required></select>
+        <select class="form__field" aria-label="Course">
+          <option>Bachelor of Physiotherapy (BPT)</option>
+        </select>
+        <button class="btn btn--block" type="submit">Send my details</button>
+        <p class="form__note">Our counsellors will contact you about BPT admissions 2027-28.</p>
+      </div>
+      <div class="form__done" role="status">
+        <b>Thank you</b>
+        <p class="form__note">We have your details. A counsellor will call you shortly.</p>
+      </div>
+    </form>
   </div>
 
   <script>
@@ -3060,8 +3182,6 @@
       function onScroll() {
         var y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
         if (bar) bar.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
-        nav.classList.toggle("nav--hidden", y > last && y > 500 && !nav.classList.contains("nav--open"));
-        last = y;
         var a = null; secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < innerHeight * .4) a = links[i] });
         if (a !== cu) activate(a);
         light();
@@ -3070,7 +3190,9 @@
       /* Mobile menu */
       var tg = $("navToggle");
       function setMenu(o) {
-        nav.classList.toggle("nav--hidden", y > last && y > 500 && !nav.classList.contains("nav--open"));
+        nav.classList.toggle("nav--open", o);
+        tg.setAttribute("aria-expanded", o);
+        tg.setAttribute("aria-label", o ? "Close menu" : "Open menu");
       }
       tg.addEventListener("click", function () { setMenu(!nav.classList.contains("nav--open")) });
       links.forEach(function (l) { l.addEventListener("click", function () { setMenu(false) }) });
@@ -3081,6 +3203,47 @@
       onScroll();
     })();
   </script>
+
+  <script>
+  (function () {
+    var pop = document.getElementById('pop'), f = document.getElementById('popForm'),
+        st = document.getElementById('popState'), src = document.getElementById('lmState'), last = null;
+    if (!pop || !f) return;
+    if (st && src) st.innerHTML = src.innerHTML;
+
+    function open(from) {
+      last = from || document.activeElement;
+      if (f.classList.contains('form--sent')) { f.reset(); f.classList.remove('form--sent'); }
+      pop.classList.add('pop--open');
+      document.documentElement.classList.add('pop-lock');
+      setTimeout(function () { var i = f.querySelector('input'); if (i) i.focus(); }, 60);
+    }
+    function close() {
+      if (!pop.classList.contains('pop--open')) return;
+      pop.classList.remove('pop--open');
+      document.documentElement.classList.remove('pop-lock');
+      if (last && last.focus) last.focus();
+    }
+
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-popup]');
+      if (t) { e.preventDefault(); open(t); return; }
+      if (e.target === pop) close();
+    });
+    document.getElementById('popClose').addEventListener('click', close);
+    document.addEventListener('keydown', function (e) {
+      if (!pop.classList.contains('pop--open')) return;
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key !== 'Tab') return;
+      var els = [].slice.call(f.querySelectorAll('input,select,button')).filter(function (el) { return el.offsetParent !== null });
+      if (!els.length) return;
+      var a = els[0], z = els[els.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    });
+    f.addEventListener('submit', function (e) { e.preventDefault(); f.classList.add('form--sent'); });
+  })();
+</script>
 </body>
 
 </html>
