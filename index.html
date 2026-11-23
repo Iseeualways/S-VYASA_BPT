@@ -86,7 +86,7 @@
     h2 {
       font-size: clamp(1.8rem, 4.8vw, 3.5rem);
       font-weight: 700;
-      text-transform: capitalize;
+    
     }
 
     h3 {
@@ -317,9 +317,9 @@
       transition: transform .5s var(--ease)
     }
 
-    .nav--hidden {
+    /* .nav--hidden {
       transform: translate(-50%, -160%)
-    }
+    } */
 
     .nav__logo {
       display: block;
@@ -2434,7 +2434,7 @@
     <div class="wrap">
       <div class="ab__head reveal">
         <span class="eyebrow">About the university</span>
-        <h2>S-VYASA Deemed-to-be University <span>Prashanti Kutiram Campus, Bangalore</span></h2>
+        <h2>S-VYASA Deemed-to-be University <span>Prashanti Kutiram Campus, Jigani, Anekal, Bangalore</span></h2>
       </div>
       <div class="ab__bento reveal">
         <div class="ab__text about__text">
@@ -2544,7 +2544,7 @@
     <div class="wrap">
       <div class="reveal">
         <span class="eyebrow">02 — Eligibility</span>
-        <h2>Who can apply for BPT</h2>
+        <h2>Who Can Apply For BPT</h2>
         <p class="lead">Below is a list of details that makes one eligible for S-VYASA University BPT Admission.</p>
       </div>
       <div class="rules reveal">
@@ -2580,7 +2580,7 @@
     <div class="wrap">
       <div class="reveal">
         <span class="eyebrow">03 — Curriculum</span>
-        <h2>What you will study</h2>
+        <h2>What You Will Study</h2>
         <p class="lead">The curriculum begins with the science of human movement, then moves into specialised clinical
           areas, with professional skills built in throughout.</p>
 
@@ -2627,7 +2627,7 @@
     <div class="wrap">
       <div class="reveal">
         <span class="eyebrow">04 — Why S-VYASA</span>
-        <h2>What sets S-VYASA apart</h2>
+        <h2>What Sets S-VYASA Apart</h2>
         <p class="lead">Eight strengths of the BPT programme, grouped by what they build in you.</p>
       </div>
       <div class="strengths reveal">
@@ -2704,7 +2704,7 @@
     <div class="wrap">
       <div class="reveal">
         <span class="eyebrow">06 — Careers</span>
-        <h2>Career opportunities after BPT</h2>
+        <h2>Career Opportunities After BPT</h2>
         <p class="lead">Graduates can practise independently or work within multidisciplinary healthcare teams.</p>
 
       </div>
@@ -2756,7 +2756,7 @@
   <section class="section section--flush" id="testimonials">
     <div class="wrap reveal">
       <span class="eyebrow">07 — Students</span>
-      <h2>Hear from our students</h2>
+      <h2>Hear From Our Students</h2>
       <p class="lead">Stories from students pursuing their academic journey at S-VYASA University, Bangalore.</p>
       <div class="quotes">
         <article class="quote quote--featured">
@@ -2856,7 +2856,7 @@
     <div class="wrap">
       <div class="reveal">
         <span class="eyebrow">08 — How to apply</span>
-        <h2>Get started in Two steps</h2>
+        <h2>Get Started In Two Steps</h2>
         <p class="lead">From your first enquiry to your application, in the order you need it.</p>
       </div>
       <ol class="steps reveal">
@@ -2885,7 +2885,7 @@
   <section class="section section--flush" id="faqs">
     <div class="wrap faq">
       <div class="faq__side"><span class="eyebrow">09 — FAQs</span>
-        <h2>Frequently asked questions</h2>
+        <h2>Frequently Asked Questions</h2>
       </div>
       <div class="reveal">
         <details class="faq__item">
@@ -2937,7 +2937,7 @@
       <div>
         <a class="footer__logo" href="#top" aria-label="Back to top"><img src="media/SVYASA.svg" width="180" height="38"
             alt="S-VYASA University" data-logo-ph data-ph="S-VYASA" onerror="phFix(this)"></a>
-        <h3>S-VYASA University, Prashanti Kutiram Campus</h3>
+        <h3>S-VYASA Deemed-to-be University</h3>
         <p>Prashanti Kutiram, Vivekananda Road, Kalluballu Post, Jigani, Anekal, Bangalore, Karnataka 560105</p>
       </div>
       <div>
@@ -3017,72 +3017,70 @@
       addEventListener('scroll', s, { passive: true }); s()
     })();
   </script>
-<script>
-  (function () {
-    var $ = function (i) { return document.getElementById(i) }, $$ = function (s) { return [].slice.call(document.querySelectorAll(s)) };
-    var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  <script>
+    (function () {
+      var $ = function (i) { return document.getElementById(i) }, $$ = function (s) { return [].slice.call(document.querySelectorAll(s)) };
+      var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    /* Form */
-    var lead = $("lead");
-    if (lead) lead.addEventListener("submit", function (e) { e.preventDefault(); this.classList.add("form--sent") });
+      /* Form */
+      var lead = $("lead");
+      if (lead) lead.addEventListener("submit", function (e) { e.preventDefault(); this.classList.add("form--sent") });
 
-    /* Marquee loop */
-    var tt = $("trustTrack");
-    if (tt) {
-      var base = [].slice.call(tt.children);
-      for (var c = 0; c < 3; c++) base.forEach(function (li) { var k = li.cloneNode(true); k.setAttribute("aria-hidden", "true"); tt.appendChild(k) });
-    }
+      /* Marquee loop */
+      var tt = $("trustTrack");
+      if (tt) {
+        var base = [].slice.call(tt.children);
+        for (var c = 0; c < 3; c++) base.forEach(function (li) { var k = li.cloneNode(true); k.setAttribute("aria-hidden", "true"); tt.appendChild(k) });
+      }
 
-    /* Reveals */
-    var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("is-in"); io.unobserve(x.target) } }) }, { threshold: .1 });
-    $$(".reveal").forEach(function (el) { io.observe(el) });
+      /* Reveals */
+      var io = new IntersectionObserver(function (es) { es.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("is-in"); io.unobserve(x.target) } }) }, { threshold: .1 });
+      $$(".reveal").forEach(function (el) { io.observe(el) });
 
-    /* About: words light up on scroll (runs only if an element with id="aboutText" exists) */
-    var abt = $("aboutText"), words = [], lit = 0;
-    if (abt) {
-      $$("#aboutText p").forEach(function (p) { p.innerHTML = p.textContent.trim().split(/\s+/).map(function (w) { return '<span class="about__word">' + w + '</span>' }).join(" ") });
-      words = $$(".about__word");
-    }
-    function light() {
-      if (!abt || !words.length) return;
-      var r = abt.getBoundingClientRect(), vh = innerHeight, p = Math.max(0, Math.min(1, (vh * .8 - r.top) / (r.height + vh * .25))), n = Math.round(p * words.length);
-      if (n === lit) return;
-      words.forEach(function (w, i) { w.classList.toggle("about__word--lit", i < n) }); lit = n;
-    }
+      /* About: words light up on scroll (runs only if an element with id="aboutText" exists) */
+      var abt = $("aboutText"), words = [], lit = 0;
+      if (abt) {
+        $$("#aboutText p").forEach(function (p) { p.innerHTML = p.textContent.trim().split(/\s+/).map(function (w) { return '<span class="about__word">' + w + '</span>' }).join(" ") });
+        words = $$(".about__word");
+      }
+      function light() {
+        if (!abt || !words.length) return;
+        var r = abt.getBoundingClientRect(), vh = innerHeight, p = Math.max(0, Math.min(1, (vh * .8 - r.top) / (r.height + vh * .25))), n = Math.round(p * words.length);
+        if (n === lit) return;
+        words.forEach(function (w, i) { w.classList.toggle("about__word--lit", i < n) }); lit = n;
+      }
 
-    /* Navbar: sliding pill, scroll-spy, hide on scroll, progress */
-    var nav = $("nav"), pill = $("navPill"), bar = $("navProgress"), box = $("navLinks"), links = $$(".nav__link"), cu = null, last = 0;
-    function moveTo(a) { if (!pill) return; if (!a) { pill.style.opacity = 0; return } pill.style.opacity = 1; pill.style.width = a.offsetWidth + "px"; pill.style.transform = "translateX(" + a.offsetLeft + "px)" }
-    function activate(a) { cu = a; links.forEach(function (l) { l.classList.toggle("nav__link--active", l === a) }); moveTo(a); if (a && innerWidth > 1000) box.scrollTo({ left: a.offsetLeft - 20, behavior: reduce ? "auto" : "smooth" }) }
-    links.forEach(function (l) { l.addEventListener("mouseenter", function () { moveTo(l) }); l.addEventListener("focus", function () { moveTo(l) }) });
-    if (box) box.addEventListener("mouseleave", function () { moveTo(cu) });
-    var secs = links.map(function (l) { return document.querySelector(l.getAttribute("href")) });
-    function onScroll() {
-      var y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
-      if (bar) bar.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
-      nav.classList.toggle("nav--hidden", y > last && y > 500 && !nav.classList.contains("nav--open"));
-      last = y;
-      var a = null; secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < innerHeight * .4) a = links[i] });
-      if (a !== cu) activate(a);
-      light();
-    }
+      /* Navbar: sliding pill, scroll-spy, hide on scroll, progress */
+      var nav = $("nav"), pill = $("navPill"), bar = $("navProgress"), box = $("navLinks"), links = $$(".nav__link"), cu = null, last = 0;
+      function moveTo(a) { if (!pill) return; if (!a) { pill.style.opacity = 0; return } pill.style.opacity = 1; pill.style.width = a.offsetWidth + "px"; pill.style.transform = "translateX(" + a.offsetLeft + "px)" }
+      function activate(a) { cu = a; links.forEach(function (l) { l.classList.toggle("nav__link--active", l === a) }); moveTo(a); if (a && innerWidth > 1000) box.scrollTo({ left: a.offsetLeft - 20, behavior: reduce ? "auto" : "smooth" }) }
+      links.forEach(function (l) { l.addEventListener("mouseenter", function () { moveTo(l) }); l.addEventListener("focus", function () { moveTo(l) }) });
+      if (box) box.addEventListener("mouseleave", function () { moveTo(cu) });
+      var secs = links.map(function (l) { return document.querySelector(l.getAttribute("href")) });
+      function onScroll() {
+        var y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+        if (bar) bar.style.transform = "scaleX(" + (h > 0 ? y / h : 0) + ")";
+        nav.classList.toggle("nav--hidden", y > last && y > 500 && !nav.classList.contains("nav--open"));
+        last = y;
+        var a = null; secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top < innerHeight * .4) a = links[i] });
+        if (a !== cu) activate(a);
+        light();
+      }
 
-    /* Mobile menu */
-    var tg = $("navToggle");
-    function setMenu(o) {
-      nav.classList.toggle("nav--open", o);
-      tg.setAttribute("aria-expanded", o);
-      tg.setAttribute("aria-label", o ? "Close menu" : "Open menu");
-    }
-    tg.addEventListener("click", function () { setMenu(!nav.classList.contains("nav--open")) });
-    links.forEach(function (l) { l.addEventListener("click", function () { setMenu(false) }) });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false) });
-    document.addEventListener("click", function (e) { if (!nav.contains(e.target)) setMenu(false) });
-    addEventListener("resize", function () { if (innerWidth > 1000) setMenu(false); moveTo(cu) });
-    addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-  })();
-</script>
+      /* Mobile menu */
+      var tg = $("navToggle");
+      function setMenu(o) {
+        nav.classList.toggle("nav--hidden", y > last && y > 500 && !nav.classList.contains("nav--open"));
+      }
+      tg.addEventListener("click", function () { setMenu(!nav.classList.contains("nav--open")) });
+      links.forEach(function (l) { l.addEventListener("click", function () { setMenu(false) }) });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false) });
+      document.addEventListener("click", function (e) { if (!nav.contains(e.target)) setMenu(false) });
+      addEventListener("resize", function () { if (innerWidth > 1000) setMenu(false); moveTo(cu) });
+      addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
 </body>
 
 </html>
